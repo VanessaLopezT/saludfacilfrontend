@@ -14,10 +14,11 @@ const Login = ({ onLogin }) => {
   }
 
   try {
-    const response = await axios.post('http://localhost:3000/auth/login', {
-      email,
-      password
-    });
+    const response = await axios.post('https://saludfacilbackend-production.up.railway.app/auth/login', {
+    email,
+    password
+  });
+
 
     const data = response.data;
     console.log('Login exitoso:', data);

@@ -20,7 +20,7 @@ const App = () => {
 
   const fetchCitas = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/schedule');
+      const response = await axios.get('https://saludfacilbackend-production.up.railway.app/schedule');
       const disponibles = response.data.filter(cita => cita.estado === 'Disponible');
       setCitas(disponibles);
       setCitaSeleccionada(null);
